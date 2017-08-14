@@ -1,0 +1,22 @@
+using System;
+using System.Web.Http;
+using Test.Core.Cache; // MyEnum exists here MyEnum {FirstCache, SecondCache, AllCaches}
+using Test.Core.WebApi;
+
+namespace Test.Core.CacheRefreshManagement.Api.Cache
+{
+    [Resource("CacheRefresh", 1)]
+    [RoutePrefix("api/cache")]
+    public class CacheRefreshController : CoreApiController
+    {
+        [HttpPost]
+        [Route("refresh")]
+        public void TriggerSolrCacheRefresh([FromBody] MyEnum cacheToRefresh)
+        {
+            if (cacheToRefresh == MyEnum.OneCache || cacheToRefresh == MyEnum.AllCaches)
+            {
+                // Code to write a row in table
+            }
+        }
+    }
+}
