@@ -1,0 +1,15 @@
+[HttpPost]
+public async Task<ActionResult> Refresh(CacheRefreshResultsViewModel model)
+{
+	using (var client = new HttpClient())
+	{
+		client.BaseAddress = new Uri(RestApiUrl); 
+		//RestApiUrl =http://refresh-pages:80/api
+
+		client.DefaultRequestHeaders.Clear(); 
+		client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+		var response = await client.PostAsJsonAsync(string.Format("{0}/api/cache/refresh", RestApiUrl),
+			new KeyValuePair<string, string>("cacheToRefresh", MyEnum.FirstCache.ToString()));
+		return DisplayFor(model);
+	}
+}
