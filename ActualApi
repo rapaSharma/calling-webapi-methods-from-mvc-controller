@@ -13,7 +13,7 @@ namespace Test.Core.CacheRefreshManagement.Api.Cache
         [Route("refresh")]
         public void TriggerSolrCacheRefresh([FromBody] MyEnum cacheToRefresh)
         {
-            if (cacheToRefresh == MyEnum.OneCache || cacheToRefresh == MyEnum.AllCaches)
+            if (cacheToRefresh == MyEnum.FirstCache || cacheToRefresh == MyEnum.AllCaches)
             {
                 // Code to write a row in table
             }
