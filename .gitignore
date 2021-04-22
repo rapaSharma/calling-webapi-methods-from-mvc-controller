@@ -1,1 +1,7 @@
-/CallingWebApiMethodsFromMVCController/.vs
+/CallingWebApiMethodsFromMVCController/.vs/
+/CallingWebApiMethodsFromMVCController/packages/
+/CallingWebApiMethodsFromMVCController/MVC/obj/
+/CallingWebApiMethodsFromMVCController/MVC/bin/
+/CallingWebApiMethodsFromMVCController/WebApi/obj/
+/CallingWebApiMethodsFromMVCController/WebApi/bin/
+/CallingWebApiMethodsFromMVCController/CallingWebApiMethodsFromMVCController.sln.DotSettings.user
